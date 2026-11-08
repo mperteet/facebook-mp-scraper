@@ -160,7 +160,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.command in ("telegram-setup", "test-notify"):
         config = None
     elif not args.config.exists():
-        sys.exit(f"{args.config} not found. Copy config.example.toml to config.toml and edit it.")
+        sys.exit(f"{args.config} not found. Create it with at least one [[searches]] entry (see README).")
     else:
         config = load_config(args.config)
 

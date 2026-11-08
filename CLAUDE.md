@@ -14,7 +14,7 @@ uv run fbmp run                           # continuous loop with Telegram alerts
 uv run fbmp test-notify | telegram-setup  # Telegram checks
 ```
 
-Runtime config lives in `config.toml` (from `config.example.toml`) and secrets in `.env` (from `.env.example`). Both are gitignored, as is `data/`, which holds the browser profile, the SQLite DB and debug HTML dumps.
+Runtime config lives in `config.toml` (schema and defaults in `config.py`; only `searches` is required) and secrets in `.env` (from `.env.example`). Both are gitignored, as is `data/`, which holds the browser profile, the SQLite DB and debug HTML dumps.
 
 ## Architecture
 

@@ -17,9 +17,18 @@ It does not spoof browser fingerprints, rotate proxies or solve CAPTCHAs. Those 
 
 ```bash
 uv sync
-cp config.example.toml config.toml   # set your city and searches
-cp .env.example .env                 # fill in the keys below
+cp .env.example .env   # fill in the keys below
 ```
+
+Create `config.toml` with at least one search. Every search is a page load on your account, so keep the list short:
+
+```toml
+[[searches]]
+query = "dewalt"
+max_price = 300
+```
+
+Everything else is optional. `src/fbmp/config.py` lists the other settings (city, categories, schedule, profit thresholds) and their defaults.
 
 You'll need these keys:
 
